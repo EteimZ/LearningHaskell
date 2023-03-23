@@ -5,7 +5,7 @@ This repo contains all the code I use during my study of the Haskell programming
 ## Usage
 ```haskell
 ghci
-Prelude> :l Funcs.hs -- Load the module
+Prelude> :l Funcs -- Load the module
 *Main> fact 5
 120
 ```
