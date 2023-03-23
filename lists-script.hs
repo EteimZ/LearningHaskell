@@ -53,3 +53,40 @@ productList x = product x
 
 -- using the elem function
 elemList n x = elem n x
+
+-- working with ranges
+
+oneToTen = [1..10]
+
+aToz = ['a'..'z']
+
+aToZ = ['A'..'Z']
+
+evenList = [2,4..10]
+
+oddList = [1,3..9]
+
+takeFromCycle x n = take n (cycle x)
+
+takeFromRepeat x n = take n (repeat x)
+
+-- Working with list comprehension
+
+multOfTwo = [ 2*x | x <- [1..12] ]
+
+multOfN n = [ n*x | x <- [1..12] ]
+
+-- list comprehension with predicate
+
+anotherEvenList = [ x | x <- [1..12], x `mod` 2 == 0]
+
+fizzBuzz = [ if x `mod` 15 == 0 then "Fizz Buzz" else if x `mod` 3 == 0 then "Fizz" else if x `mod` 5 == 0 then "Buzz" else show x | x <- [1..30] ]
+
+xTimesY = [ x*y | x <- [1,2,3,4], y <- [5,6,7,8] ]
+
+xTimesYOdd = [ x*y | x <- [1,2,3,4], y <- [5,6,7,8], odd (x*y) ]
+
+length' xs = sum [1 | _ <- xs] 
+
+-- Work with tuples
+
